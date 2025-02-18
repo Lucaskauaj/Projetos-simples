@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Produtos</title>
+    <link rel="stylesheet" href="style.CSS">
+</head>
+<body>
+    <header>
+      <h1>Sandy Store</h1>
+      <input type="text" id="Barra" placeholder="Digite para pesquisar..." onkeyup="searchContent()">
+      <ul class="Log">
+        <li><a href="">Login</a></li>
+        <li><a href="">Compra</a></li>
+    </ul>
+    </header>
+        <nav>
+            <ul class="menu">
+                <li><a href="">Home</a></li>
+                <li><a href="">Destaques</a></li>
+                <li><a href="">Feminino</a></li>
+                <li><a href="">Masculino</a></li>
+                <li><a href="">Galeria</a></li>
+            </ul>
+        </nav>
+    <main>
+      <div class="cartao">
+            <h3></h3>
+            <img src="" alt="Produto 1">
+            <p></p>
+            <span class="preco">R$ 10,00</span>
+      </div>
+      <div class="cartao">
+            <h3></h3>
+            <img src="" alt="Produto 2">
+            <p></p>
+            <span class="preco">R$ 10,00</span>
+      </div>
+      <div class="cartao">
+            <h3></h3>
+            <img src="" alt="Produto 3">
+            <p></p>
+            <span class="preco">R$ 10,00</span>
+      </div> 
+      <div class="cartao">
+            <h3></h3>
+            <img src="" alt="Produto 3">
+            <p></p>
+            <span class="preco">R$ 10,00</span>
+        </div>
+       <div class="cartao">
+            <h3></h3>
+            <img src="" alt="Produto 3">
+            <p></p>
+            <span class="preco">R$ 10,00</span>
+        </div>
+        <div class="cartao">
+            <h3>Produto</h3>
+            <img src="" alt="Produto 3">
+            <p></p>
+            <span class="preco">R$ 10,00</span>
+        </div>
+    </main>
+    
+</body>
+<script>
+     function searchContent() {
+            let input = document.getElementById('Barra').value.toLowerCase();
+            let contents = document.querySelectorAll('.cartao');
+
+            contents.forEach(item => {
+                if (item.innerText.toLowerCase().includes(input)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+</script>
+</html>
